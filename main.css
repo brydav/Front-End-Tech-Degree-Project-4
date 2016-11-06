@@ -1,7 +1,9 @@
-
-* {
-	box-sizing: border-box;
-	list-style: none;
+html {
+  box-sizing: border-box;
+  list-style: none;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 body {
 	margin: 0;
@@ -41,6 +43,23 @@ form input {
 	box-shadow: 0 0 10px black;
 }
 
+/************Overlay***************/
+#overlay {
+	background-color: rgba(0,0,0,.7);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	text-align: center;
+}
+#overlay img {
+	margin-top: 10%;
+	max-width: 50%;
+	box-shadow: 0 0 5px grey;
+
+}
 /************Media Queries***************/
 @media screen and (min-width: 840px) {
 	.port_wrapper {
