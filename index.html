@@ -3,17 +3,18 @@
 <head>
 	<title>My jQuery Practice</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<meta name="viewport" content="width=device-width, initial-scale =1.0">
 </head>
 <body>
 <div class="search_wrapper">
-	<form>
-		<input type="search" name="search" placeholder="Search">
+	<form onSubmit="testScript();">
+		<input type="search" id="searchField" name="search" placeholder="Search" >
 	</form>
 </div>
 <div class="port_wrapper">
-	<ul id="portfolio">
+	<ul id="portfolio" class="clearfix">
 		<li><a href="photos/01.jpg" alt="I love hay bales. Took this snap on a drive through the countryside past some straw fields."><img src="photos/thumbnails/01.jpg" alt="Hay Bales"></a></li>
 		<li><a href="photos/02.jpg" alt="The lake was so calm today. We had a great view of the snow on the mountains from here."><img src="photos/thumbnails/02.jpg" alt="Lake"></a></li>
 		<li><a href="photos/03.jpg" alt="I hiked to the top of the mountain and got this picture of the canyon and trees below."><img src="photos/thumbnails/03.jpg" alt="Canyon"></a></li>
@@ -26,11 +27,12 @@
 		<li><a href="photos/10.jpg" alt="Sunset at the coast! The sky turned a lovely shade of orange."><img src="photos/thumbnails/10.jpg" alt="Sunset"></a></li>
 		<li><a href="photos/11.jpg" alt="I did a tour of a cave today and the view of the landscape below was breathtaking."><img src="photos/thumbnails/11.jpg" alt="Cave"></a></li>
 		<li><a href="photos/12.jpg" alt="I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in."><img src="photos/thumbnails/12.jpg" alt="Bluebells"></a></li>
-
 	</ul>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="apps.js"></script>
-
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/lightBox.js"></script>
+<script src="js/searchBox.js"></script>
 </body>
 </html>

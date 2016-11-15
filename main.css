@@ -1,9 +1,9 @@
 html {
   box-sizing: border-box;
-  list-style: none;
 }
 *, *:before, *:after {
   box-sizing: inherit;
+  list-style: none;
 }
 body {
 	margin: 0;
@@ -27,6 +27,7 @@ form input {
 /************Image Gallery***************/
 
 #portfolio {
+	display: table;
 	margin: 0 auto;
 	text-align: center;
 	max-width: 980px;
@@ -44,9 +45,11 @@ form input {
 }
 
 /************Overlay***************/
+
 #overlay {
-	background-color: rgba(0,0,0,.7);
-	position: absolute;
+	background-color: rgba(0,0,0,.9);
+	/*do fixed to make all background greyed out*/
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -54,18 +57,48 @@ form input {
 	display: none;
 	text-align: center;
 }
-#overlay img {
-	margin-top: 10%;
-	max-width: 50%;
+.overlay_img {
+	margin-top: 50px;
+	max-width: 80vw;
+	max-height: 60vh;
 	box-shadow: 0 0 5px grey;
-
+	/*position: absolute;*/
 }
-/************Media Queries***************/
-@media screen and (min-width: 840px) {
-	.port_wrapper {
-		padding-top: 87px;
+#cap_text {
+	color: white;
+	/* rethink this*/
+	margin: 5% 10%; 
+	font-size: 1.2em;
+}
 
+.arrow {
+	display: inline-block;
+	padding: 0 30px;
+}
+.exit_button {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+.exit_button img,
+.arrow img {
+	box-shadow: none;
+	width: 40px;
+	height: 40px;
+}
+
+/************Media Queries***************/
+
+@media (min-width: 320px) and (max-width: 800px) and (orientation:landscape) {
+	.overlay_img {
+		/*width: 80vw;*/
 	}
+	.arrow {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 840px) {
 	.search_wrapper{
 		position: fixed;
 		top: 0px;
@@ -73,6 +106,12 @@ form input {
 	}
 	form input {
 		width: 460px;
+	}
+	.port_wrapper {
+		padding-top: 83px;
+	}
+	#overlay img {
+		/*max-width: 50%;*/
 	}
 }
 @media screen and (min-width: 1100px) {
@@ -84,4 +123,3 @@ form input {
 	}
 
 }
-
