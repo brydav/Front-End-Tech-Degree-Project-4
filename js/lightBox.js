@@ -84,6 +84,7 @@ $(document).keydown(function(e) {
 });
  $('#overlay').on("swipeleft", leftArrow);
   $('#overlay').on("swiperight", rightArrow);
+/////////Mobile Navigation - Hammer/////////
 
 
 /////////close lightbox/////////
