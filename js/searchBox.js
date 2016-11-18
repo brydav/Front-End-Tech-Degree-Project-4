@@ -1,24 +1,14 @@
-function testScript() {
-	userInput = document.getElementById('searchField').value;
-	userInput = userInput.toLowerCase();
-	alert(userInput);
-}
-/*
 var userInput;
+var inputModified;
 
-function userInputScript() {
-	var keyPress = event.keyCode;
-	if(keyPress === 13) {
-		userInput = document.getElementById('searchField').value;
-		userInput = userInput.toLowerCase();
-		alert(userInput);
-	}
-}*/
-/*
-document.getElementById('searchField').onsubmit = function () {
-	if (characterCode === 13) {
-		console.log("hello");
-	}
-	//userInput = document.getElementById('searchField');
+function searchBox() {
+	userInput = document.getElementById('searchField').value;
+	inputModified = userInput.toLowerCase();
 }
-*/
+
+function filter() {
+	//compare inputModified to text in each image's alt text
+	//if match is not found add class "non-matched"
+	//hide() "non-matched" class
+
+}
