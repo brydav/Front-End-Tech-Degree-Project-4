@@ -3,8 +3,8 @@
 var $overlay = $('<div id="overlay"></div>');
 var $image = $('<img class="overlay_img">');
 var $caption = $('<p id="cap_text"></p>');
-var $leftArrow = $('<span><a id="#" class="arrow"><img src="svg/arrow_white_left.svg"></a></span>');
-var $rightArrow = $('<span><a id="#" class="arrow"><img src="svg/arrow_white_right.svg"></a></span>');
+var $leftArrow = $('<span><a id="#" class="arrow_left arrow"><img src="svg/arrow_white_left.svg"></a></span>');
+var $rightArrow = $('<span><a id="#" class="arrow_right arrow"><img src="svg/arrow_white_right.svg"></a></span>');
 var $exit = $('<span><a id="#" class="exit_button"><img src="svg/exit_button_white.svg"></a></span>');
 var thisImage;
 
@@ -84,6 +84,7 @@ $(document).keydown(function(e) {
 });
  $('#overlay').on("swipeleft", leftArrow);
   $('#overlay').on("swiperight", rightArrow);
+  
 /////////Mobile Navigation - Hammer/////////
 
 
