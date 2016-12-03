@@ -1,14 +1,11 @@
-var userInput;
-var inputModified;
+new List('list-id', {
+  plugins: [ ListPagination(), NameOfOtherPlugin(options) ]
+});
 
-function searchBox() {
-	userInput = document.getElementById('searchField').value;
-	inputModified = userInput.toLowerCase();
-}
-
-function filter() {
-	//compare inputModified to text in each image's alt text
-	//if match is not found add class "non-matched"
-	//hide() "non-matched" class
-
-}
+var options = {
+  valueNames: [
+    { name: 'keyword', attr: 'data-keyword' },
+    { name: 'description', attr: 'alt' }
+  ]
+};
+var portWrapper = new List('port_wrapper', options);
