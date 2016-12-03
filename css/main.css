@@ -12,16 +12,13 @@ body {
 .search_wrapper {
 	background-color: white;
 	box-shadow: 0 1px 3px #888888;
-}
-form {
 	text-align: center;
 	padding: 25px 0;
 }
-form input {
+.search {
 	line-height: 16pt;
 	padding: 5px;
 	border: 1px solid grey;
-
 }
 
 /************Image Gallery***************/
@@ -85,13 +82,6 @@ form input {
 }
 
 /************Media Queries***************/
-
-/*
-@media (min-width: 320px) and (max-width: 800px) and (orientation:landscape) {
-
-	.arrow {
-	}
-}*/
 
 @media screen and (min-width: 840px) {
 	
