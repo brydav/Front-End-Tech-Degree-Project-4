@@ -24,9 +24,9 @@ $("body").append($overlay);
 /////////capture click event on images/////////
 $("#portfolio a").click(function(event){
 	event.preventDefault();
-	imageLocation = $(this).attr("href");
+	var imageLocation = $(this).attr("href");
 	$image.attr("src", imageLocation);
-	captionText = $(this).attr("alt");
+	var captionText = $(this).attr("data-caption");
 	$caption.text(captionText);
 	displayCurrentImage(this);
 	$overlay.show();
@@ -36,27 +36,28 @@ function displayCurrentImage(anchorElement) {
 	thisImage = anchorElement;
 	var imageToShow = $(anchorElement).attr('href');
 	$image.attr('src', imageToShow);
-	var captionText = $(anchorElement).attr('alt');
+	var captionText = $(anchorElement).attr('data-caption');
 	$caption.text(captionText);
 }
 
 
 /////////navigate lightbox/////////
+var theParent;
 
 function leftArrow() {
 	if ($(thisImage).parent().is(':first-child')) {
-		var theParent = $('#portfolio :last-child')
+		theParent = $('#portfolio :last-child');
 	} else {
-		var theParent = $(thisImage).parent().prev();
+		theParent = $(thisImage).parent().prev();
 	}
 	var imagePrevious = theParent.children('a');
 	displayCurrentImage(imagePrevious);
 }
 function rightArrow() {
 	if ($(thisImage).parent().is(':last-child')) {
-		var theParent = $('#portfolio :first-child');
+		theParent = $('#portfolio :first-child');
 	} else {
-		var theParent = $(thisImage).parent().next();
+		theParent = $(thisImage).parent().next();
 	}
 	var imageNext = theParent.children('a');
 	displayCurrentImage(imageNext);
@@ -82,11 +83,12 @@ $(document).keydown(function(e) {
 	}
 	e.preventDefault();
 });
+
+//////Touch Navigation - Not supported yet//////
+/*
  $('#overlay').on("swipeleft", leftArrow);
   $('#overlay').on("swiperight", rightArrow);
-  
-/////////Mobile Navigation - Hammer/////////
-
+*/  
 
 /////////close lightbox/////////
 $exit.click(function(){
