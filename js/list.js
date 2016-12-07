@@ -5,7 +5,7 @@
 var options = {
 	valueNames: [
  		{ data: ['id'] },
-    	{ attr: 'alt', name: 'description'}
+    	{ attr: 'data-caption', name: 'description'}
   		]
 	};
 var portWrapper = new List('port_wrapper', options);
